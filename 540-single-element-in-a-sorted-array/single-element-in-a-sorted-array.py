@@ -1,23 +1,13 @@
+#solving by using JUST Arrays
 class Solution(object):
     def singleNonDuplicate(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        left=0
-        right=len(nums)-1
-        while left< right:
-            mid=(left+right)//2
+        n=len(nums)
+        for i in range(0,n-1,2):
+            if nums[i] !=nums[i+1]:
+                return nums[i]
 
-            #make mid even
-            if mid%2==1:
-                mid=mid-1
-
-            if nums[mid]==nums[mid+1]:
-                left=mid+2
-            else:
-                right=mid
-
-        return nums[left]
-
-        
+        return nums[-1]
