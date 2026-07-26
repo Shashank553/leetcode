@@ -1,3 +1,4 @@
+#Sort → Compare with previous interval → Merge if overlap, else add new interval.
 class Solution(object):
     def merge(self, intervals):
         """
