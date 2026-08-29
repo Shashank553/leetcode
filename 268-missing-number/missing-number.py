@@ -1,10 +1,10 @@
 class Solution(object):
     def missingNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        
+        #1.Sorting
         n=len(nums)
-        x=n*(n+1)//2
-        y=sum(nums)
-        return x-y
+        nums.sort()
+        for i in range(n):
+            if nums[i]!=i:
+                return i
+        return n
