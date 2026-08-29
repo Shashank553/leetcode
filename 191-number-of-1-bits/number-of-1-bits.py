@@ -4,4 +4,9 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        return bin(n).count('1')
+        binary=bin(n)[2:]
+        count=0
+        for bit in binary:
+            if bit=='1':
+                count=count+1
+        return count
