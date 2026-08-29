@@ -5,8 +5,5 @@ class Solution(object):
         :rtype: int
         """
         binary=bin(n)[2:]
-        count=0
-        for bit in binary:
-            if bit=='1':
-                count=count+1
-        return count
+        result=binary.count('1')
+        return result
