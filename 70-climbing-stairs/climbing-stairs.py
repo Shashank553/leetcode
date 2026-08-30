@@ -1,3 +1,5 @@
+#this follows the fibonacci series
+
 class Solution(object):
     def climbStairs(self, n):
         if n==1:
